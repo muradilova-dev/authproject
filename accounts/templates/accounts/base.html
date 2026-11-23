@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<title>{% block title %}Аккаунт{% endblock %}</title>
+<style>
+ body{font-family:Arial,sans-serif;max-width:420px;margin:40px auto;padding:0 16px}
+ input{width:100%;padding:8px;margin:4px 0;box-sizing:border-box}
+ button{padding:10px 16px;margin-top:8px}
+ .errorlist{color:#b00020;padding-left:16px}
+ .msg{background:#e6f4ea;padding:8px;margin-bottom:12px}
+ .captcha{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+</style>
+</head>
+<body>
+{% for m in messages %}<div class="msg">{{ m }}</div>{% endfor %}
+{% block content %}{% endblock %}
+</body>
+</html>

@@ -1,0 +1,12 @@
+{% extends "accounts/base.html" %}
+{% block title %}Личный кабинет{% endblock %}
+{% block content %}
+<h2>Личный кабинет</h2>
+<p>Логин: <b>{{ user_obj.username }}</b></p>
+<p>Email: <b>{{ user_obj.email }}</b></p>
+<p>Дата регистрации: {{ user_obj.date_joined|date:"d.m.Y H:i" }}</p>
+<form method="post" action="{% url 'accounts:logout' %}">
+  {% csrf_token %}
+  <button type="submit">Выйти</button>
+</form>
+{% endblock %}

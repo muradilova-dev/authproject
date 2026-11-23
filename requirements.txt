@@ -1,0 +1,4 @@
+Django>=5.0
+django-simple-captcha>=0.6.0
+python-docx>=1.1.0
+Pillow>=10.0
